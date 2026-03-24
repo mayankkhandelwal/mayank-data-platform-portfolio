@@ -2,54 +2,50 @@ import { ArrowUpRight } from "lucide-react";
 
 const projects = [
   {
-    title: "Azure Lakehouse Implementation – Insurance Domain",
-    client: "Global Insurance Client",
+    title: "Enterprise Analytics Platform — Caterpillar USA",
+    client: "Caterpillar USA · Service Distribution & Digital (SD&D) · Feb 2022 – Present",
     description:
-      "Owned architecture and delivery of Azure Databricks Medallion platform, replacing legacy ETL pipelines and implementing enterprise-grade semantic modeling.",
+      "Owned end-to-end analytics platform architecture supporting 5 business programs (PEP, DEP, MSEP, REP, SEP). Designed SnapLogic pipelines from MySQL, MS SQL Server, Snowflake cross-region (East-1→East-2), and flat files into a unified Snowflake platform. Built Snowflake database from scratch with multi-layered view architecture as the semantic layer for all downstream BI workloads.",
     metrics: [
-      { value: "100M+", label: "Daily Data Volume" },
-      { value: "35%", label: "Cloud Cost Reduction" },
-      { value: "20→4", label: "Report Refresh Time" },
+      { value: "35%", label: "Cost Reduction" },
+      { value: "5", label: "Programs Unified" },
+      { value: "75%+", label: "Workloads Optimized" },
     ],
-    tags: ["Databricks", "Delta Lake", "ADF", "Power BI"],
+    tags: ["Snowflake", "SnapLogic", "PySpark", "Databricks", "Power BI"],
   },
   {
-    title: "Snowflake Performance & Cost Optimization",
-    client: "Financial Services Enterprise",
+    title: "Dynamic RLS & Power BI Dealer App",
+    client: "Caterpillar USA · SD&D",
     description:
-      "Led Snowflake performance engineering initiative, implementing clustering strategy, workload isolation, and governance controls to reduce uncontrolled cloud spend.",
+      "Designed dynamic Row-Level Security (RLS) using GSI Data Lake views and CWS ID-based group access. Built and published a Power BI App with role-secured workspaces for internal CAT users and 183 external dealer partners — zero dataset duplication, fully compliant with least-privilege principles.",
     metrics: [
-      { value: "30–40%", label: "Cost Optimization" },
-      { value: "60%", label: "Query Speed Improved" },
-      { value: "500+", label: "Business Users" },
+      { value: "256", label: "Internal Users" },
+      { value: "183", label: "Dealer Partners" },
+      { value: "0", label: "Dataset Duplications" },
     ],
-    tags: ["Snowflake", "SQL", "Power BI", "Cost Governance"],
+    tags: ["Power BI", "Row-Level Security", "Snowflake", "GSI Data Lake", "DAX"],
   },
   {
-    title: "Enterprise BI Governance & RLS Framework",
-    client: "Multi-Region Manufacturing Group",
+    title: "Enterprise Data Warehouse — Marathon Insurance",
+    client: "Marathon Insurance · Jamaica",
     description:
-      "Designed centralized Power BI semantic model with dynamic Row-Level Security and environment separation (Dev/QA/Prod) for controlled access.",
+      "Architected centralized enterprise data warehouse consolidating multi-source operational systems (Epic SQL, Vision SQL, Freshdesk) using Azure Data Factory and Snowflake. Implemented enterprise-wide RLS governance supporting 500+ users. Reduced data access incidents by 95%.",
     metrics: [
-      { value: "700+", label: "Users Secured" },
-      { value: "45%", label: "Duplicate Datasets Reduced" },
-      { value: "10+", label: "Engineers Led" },
+      { value: "500+", label: "Users Supported" },
+      { value: "95%", label: "Access Incidents ↓" },
+      { value: "20%", label: "Report Latency ↓" },
     ],
-    tags: ["Power BI", "DAX", "Azure AD", "Unity Catalog"],
+    tags: ["Snowflake", "Azure Data Factory", "Power BI", "RLS"],
   },
 ];
-
-
 
 const FeaturedProjects = () => {
   return (
     <section id="projects" className="py-24 px-6">
       <div className="max-w-6xl mx-auto">
         <div className="mb-16">
-          <p className="text-sm font-mono text-primary mb-3 tracking-wider uppercase">Selected Enterprise Initiatives
-</p>
-          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Enterprise Architecture Engagements
-</h2>
+          <p className="text-sm font-mono text-primary mb-3 tracking-wider uppercase">Selected Enterprise Initiatives</p>
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Enterprise Architecture Engagements</h2>
           <p className="text-muted-foreground text-lg max-w-xl">
             Enterprise data platform initiatives delivering measurable performance, governance, and cost impact.
           </p>
@@ -86,7 +82,6 @@ const FeaturedProjects = () => {
                   {project.description}
                 </p>
 
-                {/* Metrics */}
                 <div className="grid grid-cols-3 gap-4 pt-6 border-t border-border">
                   {project.metrics.map((m) => (
                     <div key={m.label}>

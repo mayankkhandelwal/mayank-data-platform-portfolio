@@ -1,4 +1,4 @@
-import { Mail, Linkedin, Github } from "lucide-react";
+import { Mail, Linkedin, Phone } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -14,13 +14,12 @@ const Contact = () => {
         </h2>
 
         <p className="text-muted-foreground text-lg mb-6 max-w-lg mx-auto">
-          Exploring senior data engineering and enterprise architecture opportunities 
-          within Global Capability Centers, focused on scalable lakehouse platforms, 
-          governance, and cloud cost optimization.
+          Exploring senior Data Platform Architect, BI Architect, and Lead Data Engineer opportunities
+          within GCCs and MNCs. Focused on scalable lakehouse platforms, Snowflake, Power BI, and cloud cost optimization.
         </p>
 
         <p className="text-sm text-muted-foreground font-mono mb-10">
-          60-day notice period · Can negotiate to 30 days · Open to Bangalore, Hyderabad, Pune, Chennai GCC roles
+          Available from April 2026 · Open to Indore, Bangalore, Hyderabad, Pune, Remote
         </p>
 
         <a
@@ -31,27 +30,24 @@ const Contact = () => {
           mayankkhandelwal08@gmail.com
         </a>
 
-        {/* <p className="text-xs text-muted-foreground mt-2">
-          60-day notice period · Can negotiate to 30 days · Open to Bangalore, Hyderabad, Pune, Chennai GCC roles
-        </p> */}
-
         <div className="flex items-center justify-center gap-6 text-muted-foreground mt-6">
           <a
             href="https://linkedin.com/in/mayank-khandelwal-30953858"
             target="_blank"
-            className="hover:text-primary transition-colors"
+            rel="noopener noreferrer"
+            className="hover:text-primary transition-colors flex items-center gap-2 text-sm"
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
+            LinkedIn
           </a>
-
           <a
-            href="https://github.com/mayankkhandelwal"
-            target="_blank"
-            className="hover:text-primary transition-colors"
-            aria-label="GitHub"
+            href="tel:+919977791323"
+            className="hover:text-primary transition-colors flex items-center gap-2 text-sm"
+            aria-label="Phone"
           >
-            <Github className="w-5 h-5" />
+            <Phone className="w-5 h-5" />
+            +91 9977791323
           </a>
         </div>
       </div>

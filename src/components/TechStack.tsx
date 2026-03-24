@@ -1,56 +1,29 @@
 const categories = [
   {
     name: "Lakehouse & Data Platform",
-    items: [
-      "Azure Databricks",
-      "Delta Lake",
-      "Snowflake",
-      "ADLS Gen2",
-      "Medallion Architecture",
-    ],
+    items: ["Databricks", "Delta Lake", "Snowflake", "Medallion Architecture", "Microsoft Fabric"],
   },
   {
     name: "Data Engineering",
-    items: [
-      "PySpark",
-      "SQL",
-      "Data Modeling",
-      "ETL / ELT Design",
-      "Performance Optimization",
-    ],
+    items: ["SnapLogic", "PySpark", "Delta Live Tables", "Auto Loader", "Star Schema", "Advanced SQL"],
   },
   {
     name: "BI & Analytics",
-    items: [
-      "Power BI",
-      "DAX",
-      "Semantic Models",
-      "Row-Level Security (RLS)",
-      "Dashboard Optimization",
-    ],
+    items: ["Power BI", "DAX", "Power Query (M)", "Power BI Embedded", "Tableau"],
   },
   {
-    name: "Azure Ecosystem",
-    items: [
-      "Azure Data Factory",
-      "Azure Synapse",
-      "Azure AD",
-      "CI/CD Pipelines",
-      "Dev / QA / Prod Architecture",
-    ],
+    name: "Source Systems",
+    items: ["MySQL", "MS SQL Server", "Snowflake Cross-Region", "Flat Files (CSV/Excel)"],
   },
   {
-    name: "Governance & Cost Control",
-    items: [
-      "Unity Catalog",
-      "Data Security Design",
-      "Cloud Cost Optimization",
-      "Workload Isolation",
-      "Monitoring & Observability",
-    ],
+    name: "Governance & Security",
+    items: ["Row-Level Security (RLS)", "Unity Catalog", "GSI Data Lake", "OLS", "Azure AD", "CWS ID Groups"],
+  },
+  {
+    name: "Delivery",
+    items: ["Azure DevOps", "CI/CD", "Agile/Scrum", "Git", "Team Leadership (10+ members)"],
   },
 ];
-
 
 const TechStack = () => {
   return (
@@ -60,16 +33,13 @@ const TechStack = () => {
           <p className="text-sm font-mono text-primary mb-3 tracking-wider uppercase">Core Technical Expertise</p>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">Technical Stack</h2>
           <p className="text-muted-foreground text-lg max-w-xl">
-            Enterprise-grade expertise across Azure lakehouse, Snowflake optimization, and secure BI architecture.
+            Enterprise-grade expertise across Snowflake, Databricks, SnapLogic, and Power BI ecosystems.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {categories.map((cat) => (
-            <div
-              key={cat.name}
-              className="p-6 rounded-xl border border-border bg-card"
-            >
+            <div key={cat.name} className="p-6 rounded-xl border border-border bg-card">
               <h3 className="text-sm font-mono text-primary mb-4 uppercase tracking-wider">
                 {cat.name}
               </h3>
